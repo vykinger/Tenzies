@@ -198,6 +198,7 @@ main{
 
 button{
     color: white;
+    font-family: 'Inter', sans-serif;
     background-color: darkcyan;
     border: none;
     padding: 10px 20px;
