@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-box;
+}
+body { 
+    margin: 0;
+    background: linear-gradient(90deg, rgb(0, 32, 96), rgb(200, 255, 255));
+    overflow: hidden;
+}
+
+main{
+    background-color: lightcyan;
+    width: 90%;
+    height: 90vh;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 15px auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.dice-wrapper{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+
+.die-box{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*die-one*/
+
+.one{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*die-two*/
+
+.two{
+    display: flex;
+    justify-content: space-between;
+}
+
+.two .dot:nth-child(1){
+    background-color: green;
+    align-self: flex-start;
+}
+
+.two .dot:nth-child(2){
+    background-color: green;
+    align-self: flex-end;
+}
+
+/*die-three*/
+
+.three{
+    display: flex;
+    justify-content: space-between;
+}
+
+.three .dot:nth-child(1){
+    background-color: darkred;
+    align-self: flex-start;
+}
+
+.three .dot:nth-child(2){
+    background-color: darkred;
+    align-self: center;
+}
+
+.three .dot:nth-child(3){
+    background-color: darkred;
+    align-self: flex-end;
+}
+
+/*die-four*/
+
+.four{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 18px;
+    
+}
+
+.four .dot{
+    background-color: gray;
+    align-self: center;
+}
+
+/*die-five*/
+
+.five .dot{
+    background-color: darkgoldenrod;
+}
+
+.five .dot:nth-child(1){
+    grid-area: one;
+}
+
+.five .dot:nth-child(2){
+    grid-area: two;
+}
+
+.five .dot:nth-child(3){
+    grid-area: three;
+}
+
+.five .dot:nth-child(4){
+    grid-area: four;
+}
+
+.five .dot:nth-child(5){
+    grid-area: five;
+}
+
+
+.five {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    grid-template-areas: 
+        "one . two"
+        ". three ."
+        "four . five";
+        
+}
+
+/*die-six*/
+
+.six .dot{
+    background-color: darkblue;
+}
+
+.six .dot:nth-child(1){
+    grid-area: one;
+}
+
+.six .dot:nth-child(2){
+    grid-area: two;
+}
+
+.six .dot:nth-child(3){
+    grid-area: three;
+}
+
+.six .dot:nth-child(4){
+    grid-area: four;
+}
+
+.six .dot:nth-child(5){
+    grid-area: five;
+}
+
+.six .dot:nth-child(6){
+    grid-area: six;
+}
+
+
+.six {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    grid-template-areas: 
+        "one . two"
+        "three . four"
+        "five . six";
+        
+}
+    
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.one{
+    background-color: blue;
+}
+
+button{
+    color: white;
+    background-color: darkcyan;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:active{
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+    margin-bottom: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Young Serif', serif;
+}
+
+main p{
+    margin: 0 60px;
+    font-family: 'Inter', sans-serif;
+    color: gray;
+    letter-spacing: 1px;
+}
+
